@@ -2,8 +2,15 @@ import React, { Component } from "react";
 import { Field, reduxForm } from "redux-form";
 
 class SearchBar extends Component {
+	constructor() {
+		super();
+
+		this.handleFormSubmit = this.handleFormSubmit.bind(this);
+	}
+
 	handleFormSubmit({ query }) {
 		console.log("trying to handle submit query", query);
+		//navigate to results page
 	}
 
 	renderInput(field) {
@@ -13,7 +20,7 @@ class SearchBar extends Component {
 	render() {
 		const { handleSubmit } = this.props;
 		return (
-			<form className="search-bar" onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+			<form className="search-bar" onSubmit={handleSubmit(this.handleFormSubmit)}>
 				<Field name="query" component={this.renderInput} />
 			</form>
 		);
