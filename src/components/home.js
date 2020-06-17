@@ -7,13 +7,6 @@ export default class Home extends Component {
 				<div className="container">
 					<div className="logo"></div>
 					<div className="search-bar"></div>
-					<div className="recent">
-						<ul>
-							<li>Recent Post</li>
-							<li>Recent Post</li>
-							<li>Recent Post</li>
-						</ul>
-					</div>
 				</div>
 			</div>
 		);
