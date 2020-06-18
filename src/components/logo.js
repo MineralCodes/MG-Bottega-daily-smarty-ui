@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class Logo extends Component {
 	render() {
@@ -9,7 +10,9 @@ export default class Logo extends Component {
 
 		return (
 			<div className="logo-wrapper-main">
-				<img src="/assets/ds_circle_logo.png" alt="dailysmarty logo" style={size} />
+				<Link to="/">
+					<img src="/assets/ds_circle_logo.png" alt="dailysmarty logo" style={size} />
+				</Link>
 			</div>
 		);
 	}
