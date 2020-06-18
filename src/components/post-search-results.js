@@ -1,7 +1,15 @@
 import React, { Component } from "react";
 
-export default class PostSearchResults extends Component {
+class PostSearchResults extends Component {
 	render() {
-		return <div>these are the results for the search</div>;
+		return (
+			<div className="results-posts">
+				<div className="results-posts-wrapper">
+					<ul className="results-posts-posts">RESULTS GO HERE</ul>
+				</div>
+			</div>
+		);
 	}
 }
+
+export default PostSearchResults;
