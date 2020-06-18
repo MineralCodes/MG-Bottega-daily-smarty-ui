@@ -1,4 +1,4 @@
-import { SET_RECENT_POSTS, SET_RESULTS_POSTS } from "../actions/types";
+import { SET_RECENT_POSTS, SET_RESULTS_POSTSn } from "../actions/types";
 
 const INIT_STATE = {
 	resultsPosts: [],
