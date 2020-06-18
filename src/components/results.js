@@ -1,11 +1,14 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import * as actions from "../actions";
 
 import Logo from "./logo";
 import SearchBar from "./search-bar";
 import PostSearchResults from "./post-search-results";
 
-export default class Results extends Component {
+class Results extends Component {
 	handleSearchbarSubmit(query) {
+		this.props.fetchPostSearchResults(query);
 		console.log(query);
 	}
 
@@ -19,3 +22,5 @@ export default class Results extends Component {
 		);
 	}
 }
+
+export default connect(null, actions)(Results);
