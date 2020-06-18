@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
+import { createStore, applyMiddleware, compose } from "redux";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import thunk from "redux-thunk";
@@ -12,7 +12,13 @@ import Home from "./components/home";
 import Results from "./components/results";
 import NoMatch from "./components/no-match";
 
-const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
+const createStoreWithMiddleware = applyMiddleware(thunk)(
+	compose(
+		(window.__REDUX_DEVTOOLS_EXTENSION__() ? window.__REDUX_DEVTOOLS_EXTENSION__() : (f) => f)(
+			createStore
+		)
+	)
+);
 
 import "./style/main.scss";
 
