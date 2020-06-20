@@ -29,7 +29,9 @@ export function fetchPostSearchResults(query, callback) {
 					type: SET_RESULTS_POSTS,
 					payload: response.data.posts,
 				});
-				callback();
+				if (callback) {
+					callback();
+				}
 			})
 			.catch((error) => {
 				console.log("error", error);
