@@ -5,7 +5,7 @@ import Post from "./post";
 class PostSearchResults extends Component {
 	renderPosts() {
 		const posts = this.props.resultsPosts.map((post, index) => {
-			return <Post key={index} {...post} />;
+			return <Post type="result" key={index} {...post} />;
 		});
 
 		return posts;
