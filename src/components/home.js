@@ -8,8 +8,9 @@ import RecentPosts from "./recent-posts";
 
 class Home extends Component {
 	handleSearchbarSubmit(query) {
-		this.props.fetchPostSearchResults(query);
-		this.props.history.push(`/results?q=${query}`);
+		this.props.fetchPostSearchResults(query, () => {
+			this.props.history.push(`/results?q=${query}`);
+		});
 	}
 
 	render() {
