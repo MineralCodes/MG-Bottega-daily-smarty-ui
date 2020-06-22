@@ -1,4 +1,9 @@
 .results {
-	@include default-page-layout();
-	grid-template-rows: 0.5fr 1fr 3fr;
+	//@include default-page-layout();
+	height: 100vh;
+	width: 66vw;
+	display: grid;
+
+	margin-top: 52px;
+	grid-row-gap: 44px;
 }

@@ -26,8 +26,8 @@ export default class Post extends Component {
 		let links = this.props.post_links.map((post_link, index) => {
 			return (
 				<div key={index} className="useful-link">
-					<div className="post-link-box"></div>
-					<div className="post-link-link">
+					<div className="useful-link-box"></div>
+					<div className="useful-link-link">
 						<a href={post_link.link_url}>Useful Link #{index + 1}</a>
 					</div>
 				</div>
@@ -51,19 +51,18 @@ export default class Post extends Component {
 			);
 		} else if (this.props.type === "result") {
 			return (
-				<li className="result-post">
+				<li
+					className="result-post"
+					onMouseEnter={() => {
+						this.setState({ height: 70 });
+					}}
+					onMouseLeave={() => {
+						this.setState({ height: 0 });
+					}}
+				>
 					<div className="result-post-topics">{this.renderTopics()}</div>
 					<div className="result-post-title">
-						<a
-							href={this.props.url_for_post}
-							target="_blank"
-							onMouseEnter={() => {
-								this.setState({ height: 70 });
-							}}
-							onMouseLeave={() => {
-								this.setState({ height: 0 });
-							}}
-						>
+						<a href={this.props.url_for_post} target="_blank">
 							{this.props.title}
 						</a>
 					</div>

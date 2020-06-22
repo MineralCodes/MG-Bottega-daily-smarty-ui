@@ -1,0 +1,42 @@
+.results-posts {
+	min-height: 70vh;
+	.results-posts-wrapper {
+		.results-posts-posts {
+			display: grid;
+			grid-row-gap: 20px;
+			justify-content: stretch;
+		}
+	}
+}
+
+.result-post {
+	display: grid;
+	align-content: space-around;
+	grid-row-gap: 22px;
+
+	.result-post-title {
+	}
+	.result-post-topics > * {
+		color: $light-blue-main;
+		font-size: 14px;
+		line-height: 17px;
+		margin-right: 10px;
+	}
+	.result-post-links {
+		display: flex;
+	}
+}
+
+.useful-link {
+	display: flex;
+	min-height: 70px;
+	.useful-link-box {
+		min-width: 70px;
+		background-color: $light-grey-two;
+		margin-right: 16px;
+	}
+	.useful-link-link a {
+		font-size: 14px;
+		line-height: 17px;
+	}
+}
