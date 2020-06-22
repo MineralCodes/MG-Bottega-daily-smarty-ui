@@ -41,7 +41,11 @@ export default class Post extends Component {
 		if (this.props.type === "recent") {
 			return (
 				<li className="recent-post">
-					<div className="recent-post-title">{this.props.title}</div>
+					<div className="recent-post-title">
+						<a href={this.props.url_for_post} target="_blank">
+							{this.props.title}
+						</a>
+					</div>
 					<div className="recent-post-topics">{this.renderTopics()}</div>
 				</li>
 			);

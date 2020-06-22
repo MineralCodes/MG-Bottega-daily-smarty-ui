@@ -16,9 +16,22 @@
 		.recent-posts-posts {
 			display: grid;
 			justify-content: space-evenly;
-			align-items: center;
 			grid-template-columns: 1fr 1fr 1fr;
 			grid-gap: 42px;
+
+			.recent-post {
+				.recent-post-title {
+				}
+				.recent-post-topics {
+					display: flex;
+					margin-top: 20px;
+					.post-topic {
+						color: $light-grey-one;
+						font-size: 14px;
+						margin-right: 8px;
+					}
+				}
+			}
 		}
 	}
 }
