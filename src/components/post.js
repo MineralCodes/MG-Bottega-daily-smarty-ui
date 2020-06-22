@@ -28,7 +28,9 @@ export default class Post extends Component {
 				<div key={index} className="useful-link">
 					<div className="useful-link-box"></div>
 					<div className="useful-link-link">
-						<a href={post_link.link_url}>Useful Link #{index + 1}</a>
+						<a href={post_link.link_url} target="_blank">
+							Useful Link #{index + 1}
+						</a>
 					</div>
 				</div>
 			);
