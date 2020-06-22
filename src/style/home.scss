@@ -1,0 +1,15 @@
+.home {
+	height: 100vh;
+	width: 66vw;
+	display: grid;
+	grid-template-rows: 1fr 2fr 1fr;
+	justify-items: center;
+	align-content: space-around;
+}
+
+.recent-posts-posts {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	grid-template-columns: 1fr 1fr 1fr;
+}
