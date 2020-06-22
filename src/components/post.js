@@ -22,6 +22,27 @@ export default class Post extends Component {
 		return topics;
 	}
 
+	getPostLinkName(url) {
+		let n = url.lastIndexOf("/");
+		let title = url.substring(n + 1, url.length);
+
+		if (n + 1 == url.length) {
+			let trim = url.slice(0, n);
+			n = trim.lastIndexOf("/");
+			title = url.substring(n + 1, url.length - 1);
+		}
+
+		if (title.includes(".")) {
+			let trim = title.lastIndexOf(".");
+			title = title.slice(0, trim);
+		}
+
+		title = title.replace(/-/g, " ");
+		title = title.replace(/_/g, " ");
+
+		return title;
+	}
+
 	renderUsefulLinks() {
 		let links = this.props.post_links.map((post_link, index) => {
 			return (
@@ -29,7 +50,7 @@ export default class Post extends Component {
 					<div className="useful-link-box"></div>
 					<div className="useful-link-link">
 						<a href={post_link.link_url} target="_blank">
-							Useful Link #{index + 1}
+							{this.getPostLinkName(post_link.link_url)}
 						</a>
 					</div>
 				</div>
@@ -56,7 +77,7 @@ export default class Post extends Component {
 				<li
 					className="result-post"
 					onMouseEnter={() => {
-						this.setState({ height: 70 });
+						this.setState({ height: 80 });
 					}}
 					onMouseLeave={() => {
 						this.setState({ height: 0 });
@@ -69,7 +90,13 @@ export default class Post extends Component {
 						</a>
 					</div>
 					<AnimateHeight duration={500} height={this.state.height}>
-						<div className="result-post-links">{this.renderUsefulLinks()}</div>
+						<div className="result-post-links">
+							{this.props.post_links.length != 0 ? (
+								this.renderUsefulLinks()
+							) : (
+								<div className="no-links">This post has no links to display</div>
+							)}
+						</div>
 					</AnimateHeight>
 				</li>
 			);

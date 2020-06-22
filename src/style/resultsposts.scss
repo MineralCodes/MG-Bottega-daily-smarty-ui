@@ -14,8 +14,6 @@
 	align-content: space-around;
 	grid-row-gap: 22px;
 
-	.result-post-title {
-	}
 	.result-post-topics > * {
 		color: $light-blue-main;
 		font-size: 14px;
@@ -30,6 +28,9 @@
 .useful-link {
 	display: flex;
 	min-height: 70px;
+	flex-basis: 205px;
+	margin-right: 37px;
+
 	.useful-link-box {
 		min-width: 70px;
 		background-color: $light-grey-two;
@@ -39,4 +40,11 @@
 		font-size: 14px;
 		line-height: 17px;
 	}
+}
+
+.no-links {
+	color: $color-grey-one;
+	font-size: 14px;
+	line-height: 17px;
+	margin-right: 16px;
 }
