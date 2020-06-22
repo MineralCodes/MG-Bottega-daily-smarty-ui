@@ -1,3 +1,4 @@
 .results {
 	@include default-page-layout();
+	grid-template-rows: 0.5fr 1fr 3fr;
 }

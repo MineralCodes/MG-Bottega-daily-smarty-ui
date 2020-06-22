@@ -10,8 +10,7 @@
 			box-shadow: 2px 3px 20px 1px rgba(0, 0, 0, 0.2);
 			border: 1px solid transparent;
 			border-radius: 4px;
-			height: 118px;
-			font-size: 40px;
+
 			transition: 0.3s ease-in-out;
 
 			&::placeholder {
@@ -31,5 +30,20 @@
 			font-size: 14px;
 			color: $light-grey-one;
 		}
+	}
+}
+
+.home-search-bar {
+	input {
+		height: 118px;
+		font-size: 40px;
+	}
+}
+.results-search-bar {
+	input {
+		font-size: 22px;
+		height: 36px;
+		display: flex;
+		align-content: flex-start;
 	}
 }
