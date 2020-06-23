@@ -1,0 +1,14 @@
+@media screen and (min-width: 700px) {
+	.recent-posts-posts {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.home-search-bar {
+		input {
+			font-size: 23px;
+			height: 59px;
+		}
+	}
+}
